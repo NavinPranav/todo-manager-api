@@ -1,7 +1,7 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "main": "src/app.ts",
+  "main": "dist/app.js",
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
