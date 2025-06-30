@@ -1,15 +1,15 @@
 import express from "express";
+import cors from "cors";
 import router from "./routes/task";
 
 const app = express();
-const cors = require('cors');
+const port = 8080;
+
 app.use(express.json());
 app.use(cors());
-
-const port = 8080;
 
 app.use('/api', router);
 
 app.listen(port, () => {
-    console.log(`\n\n Application listening at http://localhost:${port}\n\n`);
+  console.log(`\n\n Application listening at http://localhost:${port}\n\n`);
 });
