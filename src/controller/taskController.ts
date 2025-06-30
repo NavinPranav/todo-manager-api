@@ -15,7 +15,7 @@ class TaskController {
                 res.status(400).json({ error: 'Title is required' });
             }
             await taskService.createTask(req.body);
-            res.sendStatus(201);
+            res.status(201).json({ message: 'Task created' });
         } catch (err) {
           console.error('Create task error:', err);
           res.status(500).json({ error: 'Failed to create task' });
